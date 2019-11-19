@@ -7026,7 +7026,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/images/background.jpg");
-  height: 100vh; }
+  height: 100vh;
+  background-color: black; }
 
 h1,
 .navbar {
@@ -7095,6 +7096,8 @@ a {
   border-radius: 1rem; }
 
 @media (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 1.3rem; }
   #map {
     margin: 0;
     width: 80vw;
@@ -7104,16 +7107,17 @@ a {
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 1.3rem; }
 
 .a:hover {
   text-decoration: none; }
 
 .title-text {
-  font-size: 9rem; }
+  font-size: 6rem; }
 
 .sub-text {
-  font-size: 2rem; }
+  font-size: 1.75rem; }
 
 .myplaces {
   width: 250px;
