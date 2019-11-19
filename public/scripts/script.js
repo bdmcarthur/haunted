@@ -51,7 +51,7 @@ function getPlaces(result) {
 let map;
 function init() {
   map = new google.maps.Map(mapContainer, {
-    center: { lat: 38.713859, lng: -9.177575 },
+    center: { lat: 40.695839, lng: -73.932789 },
     zoom: 13,
     mapTypeControl: false,
     streetViewControl: false,
@@ -80,7 +80,12 @@ function placePlaces() {
     const marker = new google.maps.Marker({
       position: center,
       map: map,
-      label: place.name
+      label: { text: place.name, color: "white" },
+      icon: {
+        scaledSize: new google.maps.Size(30, 50),
+        labelOrigin: new google.maps.Point(16, 55),
+        url: "/images/icon.png"
+      }
     });
     mapMarker.push(marker);
   });

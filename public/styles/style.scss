@@ -62,12 +62,8 @@ a {
   width: 100vh;
 }
 
-.card-body {
-  opacity: 0.4;
-}
-
 .favButton {
-  padding: 10px 10px 10px 10px;
+  padding: 30px 30px 0px 30px;
   float: right;
   font-size: 2rem;
   background-color: Transparent;
@@ -86,8 +82,9 @@ a {
   margin: 0 auto;
 }
 
-.description {
-  font-size: 1.25rem;
+.sub-text {
+  color: black;
+  text-shadow: 1px 1px 2px #6c6565, 0 0 1em white, 0 0 0.2em white;
 }
 
 .placeName {

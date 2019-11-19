@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const placesSchema = new mongoose.Schema({
   name: {
@@ -23,20 +23,21 @@ const placesSchema = new mongoose.Schema({
     required: true
   },
   category: {
-    type: String,
-    required: true
+    type: String
   },
   addedBy: {
     type: String,
     required: true
   },
-  reviews:[{
-    email: String,
-    title: String,
-    comment: String
-  }]
+  reviews: [
+    {
+      email: String,
+      title: String,
+      comment: String
+    }
+  ]
 });
 
-const Places = mongoose.model('Places', placesSchema);
+const Places = mongoose.model("Places", placesSchema);
 
 module.exports = Places;
