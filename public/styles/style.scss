@@ -1,18 +1,34 @@
-$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$link-color: #00b7ff;
-$primary: #ff7044;
-$secondary: #ff7044;
-$red: #db1f48;
+$font-sans: "Cormorant Garamond", serif;
+$primary: #161515;
+$secondary: #050505;
 $border-radius: 1.5rem;
+$font-size-base: 1.75rem;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
   margin: 0;
-  font-family: "Muli", sans-serif;
-  background-color: white;
+  font-family: "Advent Pro", sans-serif;
   background-size: cover;
-  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-image: url("/images/background.jpg");
+}
+
+// a {
+//   font-family: "Cormorant Garamond", serif;
+// }
+
+h1,
+.navbar {
+  font-family: "Amatic SC", cursive;
+}
+.logo {
+  width: 10px;
+}
+.title-text {
+  font-size: 11rem;
+  color: black;
+  text-shadow: rgb(250, 250, 250) 3px 0px 18px;
 }
 
 .profile-btn {
@@ -26,11 +42,6 @@ a {
 
 .placeImgPro {
   width: 30%;
-}
-
-.home-img {
-  width: 800px;
-  height: 300px;
 }
 
 .title-home {
@@ -67,10 +78,6 @@ a {
   clear: both;
 }
 
-.navbar {
-  background-color: #ff7044;
-}
-
 #map {
   margin: 0;
   width: 60vw;
@@ -102,13 +109,6 @@ a {
   }
 }
 
-body {
-  margin: 0;
-  font-family: "Muli", sans-serif;
-  background-color: white;
-  background-size: cover;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -123,7 +123,7 @@ a {
 }
 
 .jumbotron {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .welcome {
   width: 450px;

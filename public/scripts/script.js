@@ -1,47 +1,52 @@
 // const locationsAvailable = document.getElementById('locationList');
 
-let markers = []
-let mapMarker = []
+let markers = [];
+let mapMarker = [];
 
-let mapContainer = document.getElementById('map');
+let mapContainer = document.getElementById("map");
 let container = document.querySelector(".row");
-let filter = document.getElementsByClassName("filter-btn")
+let filter = document.getElementsByClassName("filter-btn");
 
 //Add Event Listener
-for(let i=0; i< filter.length; i++){
-  filter[i].addEventListener('click', event => {
-    console.log(filter[i].name)
+for (let i = 0; i < filter.length; i++) {
+  filter[i].addEventListener("click", event => {
+    console.log(filter[i].name);
     let result = filter[i].name;
-    clearMarkers()
-    markers = []
-    mapMarker = []  
-    getPlaces(result)	 
+    clearMarkers();
+    markers = [];
+    mapMarker = [];
+    getPlaces(result);
   });
 }
 
 // Gets Markers from Database
 function getPlaces(result) {
-  axios.get("/places")
-   .then( res => {
-    let placesArr = res.data.places
-    if(!result){
-      for(let place of placesArr){
-        markers.push(place)
+  axios
+    .get("/places")
+    .then(res => {
+      let placesArr = res.data.places;
+      if (!result) {
+        for (let place of placesArr) {
+          markers.push(place);
+        }
+        placePlaces(markers);
+      } else {
+        placesArr.filter(place => {
+          if (
+            place.category
+              .toLowerCase()
+              .split(" ")
+              .join("") === result
+          )
+            markers.push(place);
+        });
+        placePlaces();
       }
-      placePlaces(markers);
-    }
-    else {
-      placesArr.filter(place => {
-        if(place.category.toLowerCase().split(' ').join('') === result)
-        markers.push(place)
-      });
-      placePlaces()
-    }
-   })
-   .catch(error => {
-     console.log(error);
-   })
- }
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
 
 let map;
 function init() {
@@ -50,7 +55,8 @@ function init() {
     zoom: 13,
     mapTypeControl: false,
     streetViewControl: false,
-    fullScreenControl: false
+    fullScreenControl: false,
+    styles: mapStyles
   });
 }
 
@@ -64,26 +70,26 @@ function setMapOnAll(map) {
   }
 }
 
-function placePlaces(){
-  markers.forEach(function(place){
-    const splitLoc = place.location.split(',');
+function placePlaces() {
+  markers.forEach(function(place) {
+    const splitLoc = place.location.split(",");
     const center = {
       lat: parseFloat(splitLoc[0]),
       lng: parseFloat(splitLoc[1])
     };
     const marker = new google.maps.Marker({
       position: center,
-      map : map,
+      map: map,
       label: place.name
     });
-    mapMarker.push(marker)
+    mapMarker.push(marker);
   });
-  displayPlaces()
+  displayPlaces();
 }
 
-function displayPlaces(){
+function displayPlaces() {
   container.innerHTML = "";
-  for(let place of markers){
+  for (let place of markers) {
     container.innerHTML += `
     <div class="col-sm-4 my-4">
       <div class="card h-100 place-info shadow-lg">
@@ -95,7 +101,7 @@ function displayPlaces(){
       </div>
     </div>
     </div>`;
-   }
- }
- 
+  }
+}
+
 getPlaces();

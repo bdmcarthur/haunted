@@ -8,12 +8,12 @@
     {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://kit.fontawesome.com/13283239b5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Amatic+SC:700&display=swap" rel="stylesheet">
   </head>
 
-  <body class="all-bodies">
-   <nav class="navbar navbar-expand-lg navbar-light font-weight-bold text-body mb-3">
-      <a class="navbar-brand text-light" href="/"><i class="fas fa-globe-americas"></i> Spooky Places</a>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-primary font-weight-bold text-body mb-3">
+      <a class="navbar-brand text-light" href="/"><i class="fas fa-ghost text-white"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +27,7 @@
               <a class="nav-link text-light" href="/profile/{{user._id}}">Profile</a>
            </li>
             <form method="POST" action="/logout">
-              <button class="btn text-light">Logout</button>
+              <button class="nav-link btn text-light">Logout</button>
             </form>
           {{else}}
           <li class="nav-item mx-2">
@@ -47,6 +47,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/mapstyles.js"></script>
      <script src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=init"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
