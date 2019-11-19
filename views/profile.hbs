@@ -1,0 +1,40 @@
+
+<button class="btn btn-primary my-3 text-white d-block mx-auto py-2" ><a class="profile-btn" href='/add'>Add New Place</a></button>
+<div class="row my-3">
+<div class="row">
+        {{#each places}}
+         <div class="col-sm-4 my-4">
+            <div class="card h-100 my-3">
+                <div class="card-body">
+                    <a href='/placeDetail/{{this._id}}'><img class="card-img-top mb-3" src="{{this.image}}" alt=""></a>
+                    <h5 class="card-title font-weight-bold">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <div class='text-center'>
+                        <button class="btn btn-outline-secondary mx-2 px-4"><a href='/edit/{{this._id}}'>Edit Place</a></button>
+                        <button class="btn btn-outline-secondary mx-2"><a href='/delete/{{this._id}}'>Delete Place</a></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        {{/each}}
+  </div>
+  <div class="border-bottom">
+
+</div>
+<div class="row my-3">
+        {{#each favorites}}
+            <div class="col-sm-4 my-4">
+            <div class="card h-100 my-3">
+            <div class="card-body">
+            <a href='/placeDetail/{{this._id}}'><img class="card-img-top mb-3" src="{{this.image}}" alt=""></a>
+            <h5 class="card-title font-weight-bold">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            </div>
+            </div>
+            </div>
+        {{/each}}
+  </div>
+
+
+
+    

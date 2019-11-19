@@ -1,0 +1,166 @@
+$font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$link-color: #00b7ff;
+$primary: #ff7044;
+$secondary: #ff7044;
+$red: #db1f48;
+$border-radius: 1.5rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: white;
+  background-size: cover;
+  background-image: url("images/background.jpg");
+}
+
+.profile-btn {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.placeImgPro {
+  width: 30%;
+}
+
+.home-img {
+  width: 800px;
+  height: 300px;
+}
+
+.title-home {
+  padding-top: 20px;
+}
+
+#map {
+  margin: 0;
+  width: 60vw;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.filter-btn {
+  margin: 0 auto;
+}
+.background-img {
+  width: 100vh;
+}
+
+.card-body {
+  opacity: 0.4;
+}
+
+.favButton {
+  padding: 10px 10px 10px 10px;
+  float: right;
+  font-size: 2rem;
+  background-color: Transparent;
+  border: none;
+}
+
+.placeName {
+  clear: both;
+}
+
+.navbar {
+  background-color: #ff7044;
+}
+
+#map {
+  margin: 0;
+  width: 60vw;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 1.25rem;
+}
+
+.placeName {
+  clear: both;
+}
+
+.titleInput {
+  height: 40px;
+  border-radius: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  #map {
+    margin: 0;
+    width: 80vw;
+    height: 40vh;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: white;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: none;
+}
+
+.sign-title {
+  margin-top: 4rem;
+}
+
+.jumbotron {
+  opacity: 0.7;
+}
+.welcome {
+  width: 450px;
+}
+
+.title-home {
+  padding-top: 5px;
+}
+
+.myplaces {
+  width: 250px;
+  padding-top: 30px;
+}
+
+.myplaces {
+  width: 250px;
+  padding-top: 30px;
+}
+
+.secretplace {
+  width: 400px;
+}
+
+.myplaces {
+  width: 250px;
+  padding-top: 30px;
+}
+
+.myfavourite {
+  width: 300px;
+  padding-top: 30px;
+}
+
+.secretplace {
+  width: 400px;
+}
+
+.hidden {
+  display: none;
+}

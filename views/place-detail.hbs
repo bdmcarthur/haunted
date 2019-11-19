@@ -1,0 +1,37 @@
+<form action="/addFavorite/{{place._id}}" method="POST">
+<button class="favButton" type='submit'><i class="fas fa-heart"></i></button>
+</form>
+
+<h1 class='mb-4 text-center placeName font-weight-bold'>{{place.name}}</h1>
+<img class="w-50 mt-3 mb-4 mx-auto d-block" src="{{place.image}}" alt="">
+
+<div class='container'>
+<p class="description my-2 pb-3 border-secondary border-bottom">{{place.description}}</p>
+<h4 class=" my-4 font-weight-bold border-secondary ">Visitors Comments</h4>
+{{#each place.reviews}}
+  <div class="card my-3">
+    <div class="card-body">
+      <h5 class="card-title">{{this.title}}</h5>
+      <p class="card-text">{{this.comment}}</p>
+    </div>
+  </div>
+{{/each}}
+
+<div class="my-3 pt-3 border-secondary border-top">
+  <h5 class="mb-3 font-weight-bold">Add A Comment</h5>
+<form action="/add-comment/{{place._id}}" method="post">
+   <div class="form-group">
+    <label class="font-weight-bold" for="title">Title:</label>
+    <input type="text" class="form-control" name="title" id="description">
+  </div>
+ <div class="form-group">
+    <label class="font-weight-bold" for="comment">Comment:</label>
+    <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+  </div>
+  <div class="form-group form-check">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
