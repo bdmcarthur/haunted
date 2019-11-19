@@ -106,7 +106,7 @@ function displayPlaces() {
            <p class="placeDescription card-text">${place.description.substring(
              0,
              100
-           ) + ". . ."}</p>
+           ) + " . . ."}</p>
            <a class="text-info" href="placeDetail/${place._id}">See More</a>
       </div>
     </div>

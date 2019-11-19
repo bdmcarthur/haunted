@@ -7025,7 +7025,8 @@ body {
   font-family: "Advent Pro", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/images/background.jpg"); }
+  background-image: url("/images/background.jpg");
+  height: 100vh; }
 
 h1,
 .navbar {
@@ -7108,17 +7109,11 @@ a {
 .a:hover {
   text-decoration: none; }
 
-.sign-title {
-  margin-top: 4rem; }
+.title-text {
+  font-size: 9rem; }
 
-.jumbotron {
-  opacity: 0.9; }
-
-.welcome {
-  width: 450px; }
-
-.title-home {
-  padding-top: 5px; }
+.sub-text {
+  font-size: 2rem; }
 
 .myplaces {
   width: 250px;
