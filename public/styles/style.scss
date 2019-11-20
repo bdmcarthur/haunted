@@ -3,7 +3,7 @@ $primary: #161515;
 $secondary: #050505;
 $border-radius: 1.5rem;
 $font-size-base: 1.75rem;
-
+$light: #f8f9fad1;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
@@ -24,22 +24,39 @@ h1,
 .navbar {
   font-family: "Amatic SC", cursive;
 }
+
 .logo {
   width: 10px;
 }
+
 .title-text {
   font-size: 11rem;
   color: black;
   text-shadow: rgb(250, 250, 250) 3px 0px 18px;
 }
 
-.profile-btn {
+.myButton {
+  box-shadow: 0px 0px 7px 1px #d7d0d0;
+  background: linear-gradient(to bottom, #1a1a1a 5%, #201f20 100%);
+  background-color: #424142;
+  border-radius: 26px;
+  border: 1px solid #6e686e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 14px #525252;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #242324 5%, #424142 100%);
+  background-color: #696369;
   color: white;
   text-decoration: none;
 }
-
-a {
-  color: #00b7ff;
+.myButton:active {
+  position: relative;
+  top: 1px;
 }
 
 .placeImgPro {
@@ -98,20 +115,7 @@ a {
   border-radius: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
-  body {
-    font-size: 1.3rem;
-  }
-
-  #map {
-    margin: 0;
-    width: 80vw;
-    height: 40vh;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-
+//I think these are media queries
 a {
   color: inherit;
   text-decoration: none;
@@ -119,14 +123,6 @@ a {
 
 .a:hover {
   text-decoration: none;
-}
-
-.title-text {
-  font-size: 6rem;
-}
-
-.sub-text {
-  font-size: 1.75rem;
 }
 
 .myplaces {
@@ -159,4 +155,25 @@ a {
 
 .hidden {
   display: none;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  #map {
+    margin: 0;
+    width: 80vw;
+    height: 40vh;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .title-text {
+    font-size: 6rem;
+  }
+
+  .sub-text {
+    font-size: 1.75rem;
+  }
 }
